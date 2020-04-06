@@ -12,6 +12,8 @@
     公共模块，定义公用实体和接口。
 * ### cloud-provider-service8001
     服务提供者，主要提供一个测试接口，由于为集成数据库，启动类中排除了Datasource自动配置类
+* ### cloud-consumer-service80
+    服务消费者，集成Openfeign，主要测试了服务提供者的2个接口。处理了feign调用超时的fallback回调。
 * ### cloud-eureka-service7001
     服务注册中心，未做集群。后期提供一个Dockerfile直接构建成镜像放在虚拟机上运行
 * ### cloud-gateway-service9527
