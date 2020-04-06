@@ -13,6 +13,7 @@
         <module>cloud-provider-service8001</module>
         <module>cloud-eureka-server7001</module>
         <module>cloud-gateway-service9527</module>
+        <module>cloud-consumer-service80</module>
     </modules>
 
     <dependencyManagement>
