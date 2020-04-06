@@ -1,6 +1,6 @@
 package com.coder.cloud.controller;
 
-import com.coder.bean.CommonResult;
+import com.coder.api.bean.CommonResult;
 import com.coder.cloud.service.ITestService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

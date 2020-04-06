@@ -1,6 +1,6 @@
 # Cloud-Service
 
-|            依赖             |      版本       |
+|            依赖            |      版本     |
 | :-----------------------: | :-----------: |
 | spring-boot-dependencies  | 2.2.2.RELEASE |
 | spring-cloud-dependencies |  Hoxton.SR1   |
@@ -9,7 +9,9 @@
 |          lombok           |    1.18.10    |
 |   mysql-connector-java    |    5.1.10     |
 * ### cloud-common-api
-    公共模块，定义公用实体和接口。
+    公共模块，定义公用实体和接口。   
+    集成Swagger2，并且写好配置文件，其余模块不需要再次单独集成Swagger2和配置。只需使用Swagger2注解标注接口即可使用   
+    Swagger2访问地址: http://ip:port/swagger-ui.html
 * ### cloud-provider-service8001
     服务提供者，主要提供一个测试接口，由于为集成数据库，启动类中排除了Datasource自动配置类
 * ### cloud-consumer-service80

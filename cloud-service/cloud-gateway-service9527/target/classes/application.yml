@@ -14,10 +14,14 @@ spring:
           uri: http://localhost:${server.port}
           predicates:
             - Path=/actuator/info
-        - id: provider_router
-          uri: lb://cloud-provider-service
+#        - id: provider_router
+#          uri: lb://cloud-provider-service
+#          predicates:
+#            - Path=/provider/**
+        - id: consumer_router
+          uri: lb://cloud-consumer-service
           predicates:
-            - Path=/provider/**
+            - Path=/consumer/**
 eureka:
   instance:
     instance-id: ${spring.application.name}:${server.port}
@@ -25,8 +29,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
-
-
 info:
   app.name: cloud-gateway-9527
   app.port: 9527

@@ -1,6 +1,6 @@
 package com.coder.cloud.service;
 
-import com.coder.bean.CommonResult;
+import com.coder.api.bean.CommonResult;
 import com.coder.cloud.service.fallback.TestServiceFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
