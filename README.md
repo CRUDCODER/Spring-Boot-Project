@@ -2,6 +2,11 @@
 SpringBoot工程相关代码仓库
 
 
+cloud-service
+---
+主要使用Spring boot构建Spring cloud 微服务架构。   
+主要集成Eureka注册中心、Gateway网关、OpenFeign、Ribbon、Config、Bus等组件
+
 
 Springboot-shiro-jwt
 
