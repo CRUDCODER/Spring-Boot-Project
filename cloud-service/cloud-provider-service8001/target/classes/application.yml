@@ -1,0 +1,21 @@
+server:
+  port: 8001
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+spring:
+  application:
+    name: cloud-provider-service
+
+info:
+  app.name: cloud-provider-service
+  app.port: 8001
+  app.author.name: crudcoder
+  app.author.email: 710683598@qq.com
+  app.create.date: 2020-4-6
