@@ -1,0 +1,24 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: cloud-provider-validate-code
+  redis:
+    host: localhost
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://112.74.191.183:7001/eureka
+info:
+  app.name: validate-code
+  app.description: 验证服务，生成各种验证码
+  app.author.name: pluviophile
+  app.author.email: 700683598@qq.com
+  app.author.blog: http://www.crudcoder.cn
+  app.create.date: 2020-4-10
+logging:
+  level:
+   com.coder.cloud: debug

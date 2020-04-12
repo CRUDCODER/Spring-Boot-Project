@@ -1,0 +1,31 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      #跨域配置
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allow-credentials: true
+            allowed-origins: '*'
+            allowed-headers: '*'
+            allowed-methods: '*'
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: user_router
+          uri: lb://cloud-provider-user
+          predicates:
+            - Path=/**
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://112.74.191.183:7001/eureka
