@@ -1,0 +1,27 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: cloud-provider-user
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/cloud_service
+    username: root
+    password: 990310
+    driver-class-name: com.mysql.jdbc.Driver
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://112.74.191.183:7001/eureka
+info:
+  app.name: user-service
+  app.description: 用户服务
+  app.author.name: pluviophile
+  app.author.email: 700683598@qq.com
+  app.author.blog: http://www.crudcoder.cn
+  app.create.date: 2020-4-10
+
